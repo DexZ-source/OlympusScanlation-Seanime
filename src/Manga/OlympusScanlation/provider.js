@@ -1,8 +1,8 @@
 class Provider {
 
     constructor() {
-        this.baseUrl = "https://olympusbiblioteca.com"
-        this.dashboardApi = "https://dashboard.olympusbiblioteca.com"
+        this.baseUrl = "https://olympusxyz.com"
+        this.dashboardApi = "https://dashboard.olympusxyz.com"
         this.allSeries = []
         this.slugMap = {}
         this.seriesLoaded = false
