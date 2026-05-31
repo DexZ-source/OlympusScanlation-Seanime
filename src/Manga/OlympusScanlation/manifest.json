@@ -4,7 +4,7 @@
     "description": "Olympus Scanlation is a manga provider for Seanime",
     "manifestURI": "https://raw.githubusercontent.com/DexZ-source/OlympusScanlation-Seanime/main/src/Manga/OlympusScanlation/manifest.json",
     "payloadURI": "https://raw.githubusercontent.com/DexZ-source/OlympusScanlation-Seanime/main/src/Manga/OlympusScanlation/provider.js",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Zero",
     "icon": "https://olympusxyz.com/favicon.svg",
     "type": "manga-provider",

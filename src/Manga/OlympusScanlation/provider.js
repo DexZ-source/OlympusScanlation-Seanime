@@ -56,6 +56,10 @@ class Provider {
     }
 
     async findChapters(mangaId) {
+        if (!this.seriesLoaded && !this.seriesLoading) {
+            await this.loadAllSeries()
+        }
+
         const slug = this.slugMap[mangaId]
         if (!slug) return []
 
