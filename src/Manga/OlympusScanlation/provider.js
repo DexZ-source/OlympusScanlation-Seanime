@@ -81,7 +81,7 @@ class Provider {
 
                     if (chapterId && chapterNum) {
                         chapters.push({
-                            id: String(chapterId),
+                            id: `${chapterId}:${slug}`,
                             url: `${this.baseUrl}/api/capitulo/comic-${slug}/${chapterId}`,
                             title: chapter.title || `Capítulo ${chapterNum}`,
                             chapter: String(chapterNum),
@@ -110,9 +110,15 @@ class Provider {
         return chapters
     }
 
-    async findChapterPages(chapterUrl) {
+    async findChapterPages(chapterId) {
         try {
-            const response = await this.fetchJson(chapterUrl)
+            const parts = chapterId.split(":")
+            const chId = parts[0]
+            const slug = parts[1]
+            if (!chId || !slug) return []
+
+            const url = `${this.baseUrl}/api/capitulo/comic-${slug}/${chId}`
+            const response = await this.fetchJson(url)
             if (!response.ok) return []
 
             const data = await response.json()
